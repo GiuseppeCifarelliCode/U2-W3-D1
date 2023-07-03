@@ -71,18 +71,22 @@ const createList = function () {
 const formReference = document.querySelector("form");
 formReference.addEventListener("submit", (e) => {
   e.preventDefault();
-  const pet1 = new Pets(
+  const pet = new Pets(
     petName.value,
     ownerName.value,
     species.value,
     breed.value
   );
-  petList.push(pet1);
+  petList.push(pet);
   petName.value = "";
   ownerName.value = "";
   species.value = "";
   breed.value = "";
 
   createList();
-  //   Pets.IsTheSameOwner(petList[0], petList[1]);
+  if (petList.length > 1) {
+    petList.forEach((el) => {
+      Pets.IsTheSameOwner(el, petList[0]);
+    });
+  }
 });
