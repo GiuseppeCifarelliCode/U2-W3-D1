@@ -1,0 +1,10 @@
+main form {
+  text-align: center;
+}
+main form input {
+  display: block;
+  margin: 5px auto;
+}
+main form button {
+  margin-top: 5px;
+}/*# sourceMappingURL=style.css.map */
